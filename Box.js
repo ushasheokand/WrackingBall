@@ -36,7 +36,8 @@ class Box
        }
        // Regular display
        else{
-            push();         
+            push(); 
+            strokeWeight(0.1);        
             stroke("white");
             translate(pos.x,pos.y)
             rotate(angle);
