@@ -11,7 +11,7 @@ class Box
         this.body = Bodies.rectangle(x,y,w,h,options);
         this.width = w;
         this.height= h;
-        this.image = loadImage("images/box2.png");
+        this.image = loadImage("images/box.png");
         World.add(world , this.body);
         this.visibility = 255;
     }
@@ -23,11 +23,12 @@ class Box
        
  
         // In case boxes fall , they would cover some distance in the left or right. 
-       if(pos.x < 200 || pos.x>750)
+       if((pos.x < 200 || pos.x>750) && pos.y >570)
        {            
            World.remove(world, this.body);
            push();
-           this.visibility = this.visibility - 5;
+           strokeWeight(0);
+           this.visibility = this.visibility - 20;
            translate(pos.x,pos.y)
            rotate(angle);            
            tint(255, this.visibility);
@@ -37,8 +38,8 @@ class Box
        // Regular display
        else{
             push(); 
-            strokeWeight(0.1);        
-            stroke("white");
+            strokeWeight(0);        
+             
             translate(pos.x,pos.y)
             rotate(angle);
             rectMode(CENTER);

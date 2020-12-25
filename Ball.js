@@ -21,7 +21,8 @@ class Ball
         push();
         translate(pos.x,pos.y)
         rotate(angle);
-        fill("brown");
+        strokeWeight(1);
+        fill("yellow");
         ellipseMode(CENTER);
         ellipse(0,0,this.radius,this.radius);       
         pop();

@@ -16,6 +16,7 @@ class Ground
     {
         var pos= this.body.position;
         push();
+        strokeWeight(0.1);
         fill("brown");
         rectMode(CENTER);
         rect(pos.x,pos.y,this.width,this.height);
